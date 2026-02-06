@@ -1,7 +1,10 @@
 def redact(original_string):
     new_string = ""
     for word in original_string.split(" "):
-        # YOUR CODE HERE
+        if word[0].isupper():
+            new_string += "redacted "
+        else:
+            new_string += word + " "
     return new_string
 
 eb_bio = "Erin came to Kehillah after getting her PhD in Cognitive Science \
